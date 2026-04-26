@@ -8,35 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Midnight Foodie palette */
+    --background: 0 0% 4%;              /* #0a0a0a near-black */
+    --foreground: 40 33% 97%;           /* warm white */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 230 30% 9%;                 /* #11132a deep indigo card */
+    --card-foreground: 40 33% 97%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 230 30% 9%;
+    --popover-foreground: 40 33% 97%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 24 98% 54%;              /* Swiggy orange #FC8019 */
+    --primary-foreground: 0 0% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 230 35% 12%;           /* deep indigo */
+    --secondary-foreground: 40 33% 97%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 230 20% 14%;
+    --muted-foreground: 40 10% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 50 100% 52%;              /* neon yellow #FFD60A */
+    --accent-foreground: 0 0% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 348 78% 55%;
+    --destructive-foreground: 40 33% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 230 25% 16%;
+    --input: 230 25% 16%;
+    --ring: 24 98% 54%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Brand tokens */
+    --santa-orange: 24 98% 54%;
+    --santa-yellow: 50 100% 52%;
+    --santa-pink: 340 95% 62%;
+    --santa-mint: 158 70% 55%;
+    --santa-night: 230 35% 8%;
+    --santa-deep: 234 50% 5%;
+
+    --gradient-hero: radial-gradient(ellipse at top, hsl(24 98% 54% / 0.35), transparent 60%), radial-gradient(ellipse at bottom right, hsl(340 95% 62% / 0.25), transparent 55%), linear-gradient(180deg, hsl(234 50% 5%), hsl(0 0% 4%));
+    --gradient-orange: linear-gradient(135deg, hsl(24 98% 54%), hsl(14 95% 50%));
+    --gradient-festive: linear-gradient(135deg, hsl(24 98% 54%), hsl(50 100% 52%));
+    --gradient-card: linear-gradient(145deg, hsl(230 35% 11% / 0.9), hsl(230 40% 7% / 0.9));
+    --gradient-mystery: conic-gradient(from 180deg at 50% 50%, hsl(24 98% 54%), hsl(50 100% 52%), hsl(340 95% 62%), hsl(158 70% 55%), hsl(24 98% 54%));
+
+    --shadow-glow: 0 20px 60px -15px hsl(24 98% 54% / 0.5);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.6);
+    --shadow-neon: 0 0 30px hsl(50 100% 52% / 0.4);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +120,56 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
   }
+}
+
+@layer utilities {
+  .bg-hero { background: var(--gradient-hero); }
+  .bg-festive { background: var(--gradient-festive); }
+  .bg-orange-grad { background: var(--gradient-orange); }
+  .bg-card-grad { background: var(--gradient-card); }
+  .bg-mystery { background: var(--gradient-mystery); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card-soft { box-shadow: var(--shadow-card); }
+  .shadow-neon { box-shadow: var(--shadow-neon); }
+  .text-balance { text-wrap: balance; }
+
+  .grid-bg {
+    background-image: linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+  }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(24 98% 54% / 0.5); }
+    50% { box-shadow: 0 0 40px 10px hsl(24 98% 54% / 0.15); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+  .animate-spin-slow { animation: spin-slow 18s linear infinite; }
+  .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+  .animate-marquee { animation: marquee 30s linear infinite; }
 }
