@@ -28,7 +28,7 @@ const steps = [
   {
     n: "04",
     icon: PackageCheck,
-    name: "Mza Phase",
+    name: "Maza Phase",
     title: "Surprise + debate",
     body: "Order arrives. Group chat lights up: \"Who sent it?!\" — 30-60 mins of high-frequency app opens, guaranteed.",
     accent: "santa-orange",
@@ -36,13 +36,13 @@ const steps = [
 ];
 
 export const HowItWorks = () => (
-  <section id="how" className="py-24 lg:py-32 border-t border-border/60 relative overflow-hidden">
+  <section id="how" className="py-12border-t border-border/60 relative overflow-hidden">
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-mystery rounded-full blur-[120px] opacity-10" />
     <div className="container relative">
       <div className="max-w-2xl mb-16">
         <div className="text-xs font-mono uppercase tracking-[0.2em] text-primary mb-4">§ 03 — The Workflow</div>
         <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-balance">
-          Four phases. One agentic loop. Infinite <span className="text-accent">mza</span>.
+          Four phases. One agentic loop. Infinite <span className="text-accent">maza</span>.
         </h2>
       </div>
 

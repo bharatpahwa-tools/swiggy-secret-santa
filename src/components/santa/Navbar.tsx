@@ -12,10 +12,6 @@ export const Navbar = () => (
         <a href="#demo" className="hover:text-foreground transition">Live demo</a>
         <a href="#business" className="hover:text-foreground transition">For Swiggy</a>
       </nav>
-      <Button size="sm" className="bg-orange-grad hover:opacity-90 text-primary-foreground border-0 font-semibold">
-        <Sparkles className="size-4" />
-        Try the demo
-      </Button>
     </div>
   </header>
 );

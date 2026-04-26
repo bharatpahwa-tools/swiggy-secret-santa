@@ -12,7 +12,7 @@ export const Hero = () => {
       <FloatingChip className="left-[10%] bottom-[18%] hidden lg:flex" emoji="🍜" label="Midnight Maggi" delay="3s" />
       <FloatingChip className="right-[6%] bottom-[24%] hidden lg:flex" emoji="🥟" label="Momos x14" delay="2s" />
 
-      <div className="container relative pt-20 pb-28 lg:pt-28 lg:pb-36">
+      <div className="container relative pt-10 lg:pt-18 lg:pb-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border/80 bg-card/40 backdrop-blur text-xs font-medium text-muted-foreground mb-7">
             <span className="size-1.5 rounded-full bg-santa-mint animate-pulse" />
@@ -20,14 +20,15 @@ export const Hero = () => {
           </div>
 
           <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] tracking-tight text-balance">
-            Friendship,
+            Are you up for a  {" "}
             <br />
-            delivered in a{" "}
+      
             <span className="relative inline-block">
-              <span className="relative z-10 bg-festive bg-clip-text text-transparent">brown bag.</span>
+              {/* <span className="relative z-10 bg-festive bg-clip-text text-transparent">brown bag.</span> */}
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none" preserveAspectRatio="none">
                 <path d="M2 8 Q 75 2, 150 6 T 298 4" stroke="hsl(var(--santa-orange))" strokeWidth="3" strokeLinecap="round" />
               </svg>
+              surprise order?
             </span>
           </h1>
 
@@ -37,17 +38,6 @@ export const Hero = () => {
             <span className="text-accent font-semibold">Instamart</span>. An AI that knows your friends'
             cravings — and sends them as a surprise.
           </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-3 items-center justify-center">
-            <Button size="lg" className="h-14 px-7 bg-orange-grad text-primary-foreground border-0 font-semibold text-base shadow-glow hover:opacity-95 hover:scale-[1.02] transition-all">
-              <Sparkles className="size-5" />
-              Start a Bhukkad lobby
-              <ArrowRight className="size-5" />
-            </Button>
-            <Button size="lg" variant="ghost" className="h-14 px-6 text-base text-muted-foreground hover:text-foreground hover:bg-card/60">
-              Watch the 60-sec demo →
-            </Button>
-          </div>
 
           {/* Trust strip */}
           <div className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">

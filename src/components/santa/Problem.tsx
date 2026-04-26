@@ -25,7 +25,7 @@ const problems = [
 ];
 
 export const Problem = () => (
-  <section id="problem" className="py-24 lg:py-32 border-t border-border/60">
+  <section id="problem" className="py-12 border-t border-border/60">
     <div className="container">
       <div className="max-w-2xl mb-16">
         <div className="text-xs font-mono uppercase tracking-[0.2em] text-primary mb-4">§ 02 — The Conflict</div>

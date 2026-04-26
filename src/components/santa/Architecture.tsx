@@ -8,7 +8,7 @@ const layers = [
 ];
 
 export const Architecture = () => (
-  <section className="py-24 lg:py-32 border-t border-border/60">
+  <section className="py-12 lg:py-12 border-t border-border/60">
     <div className="container">
       <div className="grid lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-5 lg:sticky lg:top-24">

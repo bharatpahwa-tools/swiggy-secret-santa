@@ -54,7 +54,7 @@ export const Demo = () => {
   };
 
   return (
-    <section id="demo" className="py-24 lg:py-32 border-t border-border/60 relative">
+    <section id="demo" className="py-12 border-t border-border/60 relative">
       <div className="container">
         <div className="max-w-2xl mb-12">
           <div className="text-xs font-mono uppercase tracking-[0.2em] text-primary mb-4">§ 04 — Live Prototype</div>
@@ -176,7 +176,7 @@ const LobbyView = ({ onStart }: { onStart: () => void }) => (
       <Button
         size="lg"
         onClick={onStart}
-        className="w-full h-13 bg-orange-grad text-primary-foreground border-0 font-semibold shadow-glow hover:opacity-95"
+        className="w-full h-13 py-4 bg-orange-grad text-primary-foreground border-0 font-semibold shadow-glow hover:opacity-95"
       >
         <Sparkles className="size-4" />
         Begin Shuffle
