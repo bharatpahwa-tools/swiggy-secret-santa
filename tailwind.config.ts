@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        santa: {
+          orange: "hsl(var(--santa-orange))",
+          yellow: "hsl(var(--santa-yellow))",
+          pink: "hsl(var(--santa-pink))",
+          mint: "hsl(var(--santa-mint))",
+          night: "hsl(var(--santa-night))",
+          deep: "hsl(var(--santa-deep))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -58,10 +66,17 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        display: ["Space Grotesk", "system-ui", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 0.5rem)",
+        "2xl": "calc(var(--radius) + 1rem)",
       },
       keyframes: {
         "accordion-down": {
